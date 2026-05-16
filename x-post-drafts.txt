@@ -1,0 +1,88 @@
+=== SHIP TWEET VARIANTS ===
+
+[A]
+Day 7/180: Project #8 shipped ✅
+
+Recipe Rage Cleaner
+
+→ Skip the 3,000-word life story on food blogs
+→ Get ingredients + steps only. Rage meter included.
+
+Built with @GeminiApp
+
+github.com/abhishek-admin/recipe-rage-cleaner
+
+What's your highest recipe rage score? 🔥
+
+#BuildInPublic
+
+---
+
+[B]
+Ever open a recipe and scroll for 4 minutes?
+
+Recipe Rage Cleaner strips the life story.
+
+→ Ingredients + steps in one click
+→ Rage meter rates how bad the blog was
+
+Powered by @GeminiApp
+
+github.com/abhishek-admin/recipe-rage-cleaner
+
+What food blog made you the most angry?
+
+#BuildInPublic
+
+---
+
+[C]
+Food blogs are 90% story, 10% recipe. I fixed it.
+
+Recipe Rage Cleaner: 1 click → clean recipe.
+
+Rage meter tells you exactly how much you dodged.
+
+Built with @GeminiApp
+
+github.com/abhishek-admin/recipe-rage-cleaner
+
+Which recipe site is the worst offender?
+
+#BuildInPublic
+
+---
+
+=== INSIGHT TWEET VARIANTS ===
+
+[D]
+Gemini extracts structured data (ingredients, steps, measurements) from unstructured food blog text with zero preprocessing.
+
+No regex. No schema. Just describe what you want — it formats it correctly every time. @GeminiApp
+
+---
+
+[E]
+The most relatable products aren't solving hard problems.
+
+Recipe Rage Cleaner solves a micro-frustration everyone has had.
+
+Build things that make people say "finally someone did this" — not "interesting, I might try this."
+
+---
+
+=== BEST PICK ===
+
+Ship tweet: → C ←
+"Food blogs are 90% story, 10% recipe. I fixed it." is the sharpest hook — a bold, shareable premise in one sentence. The stat+fix structure makes it instantly retweetable.
+
+Insight tweet: → E ←
+More universal than D. Anyone building AI products for consumers will relate to "make it sum the good ones." Teaches product thinking, not just API tricks.
+
+=== POSTING INSTRUCTIONS ===
+
+1. Ship tweet (C recommended): Post Tue May 19, 2026 at 9 PM IST with demo.gif
+2. Insight tweet (E recommended): Post Wed May 20, 2026 at 9 AM IST
+3. Not Sunday, so no weekly thread.
+
+Remember: Copy the tweet text, open X/Twitter, paste, attach demo.gif, post.
