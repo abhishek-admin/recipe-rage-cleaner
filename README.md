@@ -34,4 +34,4 @@ A Chrome extension that strips food blog nonsense and gives you only what you ca
 
 ---
 
-Built by [@happy_ships](https://x.com/happy_ships) · Day 7/180
+Built by [@happy_ships](https://x.com/happy_ships) · Day 4/180
