@@ -158,16 +158,18 @@ document.addEventListener('DOMContentLoaded', () => {
       showResult(`## Preparing to extract from ${page.title.slice(0, 50)}\n\n**${domain}** · ${wordCount.toLocaleString()} words to sort through\n\n*Gemini is hunting for the actual recipe...*`, true);
 
       // Phase 2: Full recipe extraction — single API call
-      const fullPrompt = `Food blog post: "${page.title}"
+      const fullPrompt = `Page: "${page.title}"
 URL: ${page.url}
 
 Full page text:
 ${page.text.slice(0, 10000)}
 
-Extract the recipe and rate the experience. Structure exactly as:
+FIRST: Determine if this page contains a food recipe (ingredients + cooking steps).
+
+IF IT IS A FOOD RECIPE PAGE, respond with this structure exactly:
 
 ## 🔥 Rage Meter: X/10
-[One sarcastic sentence about how much life story appeared before the recipe. E.g. "X words of backstory before a recipe that takes 20 minutes."]
+[One sarcastic sentence about how much life story appeared before the recipe.]
 
 ## 🍳 ${page.title.split('|')[0].trim()}
 
@@ -181,15 +183,32 @@ Extract the recipe and rate the experience. Structure exactly as:
 [Numbered steps — clean, direct, nothing extra]
 
 ## ⏭️ What You Skipped
-[2-3 bullet points of the most painfully unnecessary content that was in the blog post, written with light sarcasm]`;
+[2-3 bullet points of the most painfully unnecessary content, written with light sarcasm]
+
+IF IT IS NOT A FOOD RECIPE PAGE, respond with this structure instead:
+
+## 🚫 Wrong Kitchen
+
+This is not a food website. But since you're here, here's what this page IS made of:
+
+## 🧂 Ingredients of ${page.title.split('|')[0].trim().slice(0, 40)}
+[List 5-7 humorous "ingredients" based on what the page actually contains. E.g. for a news site: "3 cups of outrage, 1 tablespoon of clickbait, a pinch of anonymous sources..." Be specific to what's actually on this page.]
+
+### Instructions
+1. [Funny step 1 based on how this page works]
+2. [Funny step 2]
+3. [Funny step 3]
+
+## 👨‍🍳 Chef's Note
+Please open an actual food recipe website — your stomach will thank you. Might we suggest searching for something delicious instead?`;
 
       chrome.runtime.sendMessage(
         {
           action: 'callGeminiBackground',
           prompt: fullPrompt,
           options: {
-            systemInstruction: 'You are a recipe extractor who is hilariously annoyed by food blog life stories. Extract every ingredient and step with precision. Be sarcastic about the filler but accurate about the recipe.',
-            temperature: 0.5,
+            systemInstruction: 'You are a recipe extractor who is hilariously annoyed by food blog life stories. When it IS a recipe page, extract precisely and be sarcastic about the filler. When it is NOT a recipe page, be genuinely funny and specific to what the page actually contains — not generic.',
+            temperature: 0.7,
           },
         },
         (response) => {
