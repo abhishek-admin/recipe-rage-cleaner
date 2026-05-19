@@ -6,7 +6,7 @@
 
 Every food blog buries the recipe under a novel about their grandmother's kitchen, a trip to Tuscany, and three paragraphs about seasonal produce. This extension cuts straight to ingredients and steps — and rates your rage level for what you just had to sit through.
 
-![Demo](demo.gif)
+![Demo](rrcgifssss.gif)
 
 ---
 
