@@ -29,7 +29,7 @@ Every food blog buries the recipe under a novel about their grandmother's kitche
 
 ---
 
-## Setup
+## Getting Started
 
 ### 1. Load the extension
 1. Go to `chrome://extensions`
@@ -37,12 +37,14 @@ Every food blog buries the recipe under a novel about their grandmother's kitche
 3. Click **Load unpacked** → select the `recipe-rage-cleaner` folder
 
 ### 2. Add your API key
-Click **⚙** in the popup and paste one of the following:
+On first launch, the extension automatically shows a setup screen asking for your API key.
+
+You only need **one** of the following — enter whichever you have:
 
 - **Gemini API key** — free at [aistudio.google.com](https://aistudio.google.com/apikey)
-- **OpenRouter API key** — free tier at [openrouter.ai](https://openrouter.ai) (use as fallback if Gemini quota runs out)
+- **OpenRouter API key** — free tier at [openrouter.ai](https://openrouter.ai)
 
-Only one key is required. If both are saved, Gemini is used first with OpenRouter as fallback.
+If both are saved, Gemini is used first with OpenRouter as automatic fallback when quota runs out. You can update or change keys anytime via the **⚙** icon in the popup.
 
 ---
 
