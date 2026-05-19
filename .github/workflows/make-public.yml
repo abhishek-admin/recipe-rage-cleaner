@@ -1,0 +1,21 @@
+name: Make Repository Public
+
+# Fires at 15:50 UTC = 9:20 PM IST on May 19 2026
+# workflow_dispatch lets you trigger it manually as a backup
+on:
+  schedule:
+    - cron: '50 15 19 5 *'
+  workflow_dispatch:
+
+jobs:
+  make-public:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set repository visibility to public
+        run: |
+          gh api repos/${{ github.repository }} \
+            --method PATCH \
+            --field visibility=public
+          echo "✅ Repository is now public: https://github.com/${{ github.repository }}"
+        env:
+          GH_TOKEN: ${{ secrets.REPO_ADMIN_TOKEN }}
