@@ -1,64 +1,75 @@
-# Recipe Rage Cleaner
+# 🍳 Recipe Rage Cleaner
 
-> Extract just the recipe. Skip the 3,000-word life story.
+> **Extract just the recipe. Skip the 3,000-word life story.**
+> Instantly bypasses narrative fluff, ancestral background, and aggressive popups to deliver exact ingredients and cooking steps.
 
-**Day 04 / 180 — 180 Days of Building**
+<div align="center">
 
-Every food blog buries the recipe under a novel about their grandmother's kitchen, a trip to Tuscany, and three paragraphs about seasonal produce. This extension cuts straight to ingredients and steps — and rates your rage level for what you just had to sit through.
+[![Chrome MV3](https://img.shields.io/badge/Chrome-Manifest_V3-7C6AFF?style=for-the-badge&logo=google-chrome&logoColor=white)](https://developer.chrome.com/docs/extensions/)
+[![Gemini AI](https://img.shields.io/badge/Gemini-2.0_Flash-D4AF37?style=for-the-badge&logo=google-gemini&logoColor=white)](https://ai.google.dev/)
+[![License](https://img.shields.io/badge/License-MIT-emerald?style=for-the-badge)](LICENSE)
+[![Streak](https://img.shields.io/badge/Day-04_/_180-vanilla?style=for-the-badge&logo=github&logoColor=white)](https://x.com/happy_ships)
 
-![Demo](rrcgifssss.gif)
-
----
-
-## What it does
-
-- **Rage Meter** — scores how much unnecessary content came before the recipe (0–10)
-- **Ingredients** — clean bullet list with exact measurements, nothing extra
-- **Instructions** — numbered steps only, no filler
-- **What You Skipped** — sarcastic summary of the fluff you just escaped
-- **Wrong kitchen detector** — open a non-food page? It humorously lists the "ingredients" of whatever you're looking at instead
+</div>
 
 ---
 
-## How to use
+## 📖 The Problem & The Solution
 
-1. Open any food blog or recipe page
-2. Click the extension icon
-3. Hit **Extract Recipe**
-4. Get the recipe instantly — no scrolling, no waiting for ads to load
+Every online food blog buries the actual recipe under a mini-novel about the author's childhood, a family trip to Tuscany, three paragraphs on seasonal produce, and a barrage of shifting layout ads.
 
----
+**Recipe Rage Cleaner** strips all that away in under 3 seconds. It parses the page, isolates the core recipe, extracts exact measurements and cooking steps, and delivers a sarcastic summary of the fluff you just escaped—complete with a diagnostic "Rage Rating".
 
-## Getting Started
-
-### 1. Load the extension
-1. Go to `chrome://extensions`
-2. Enable **Developer mode** (top right toggle)
-3. Click **Load unpacked** → select the `recipe-rage-cleaner` folder
-
-### 2. Add your API key
-On first launch, the extension automatically shows a setup screen asking for your API key.
-
-You only need **one** of the following — enter whichever you have:
-
-- **Gemini API key** — free at [aistudio.google.com](https://aistudio.google.com/apikey)
-- **OpenRouter API key** — free tier at [openrouter.ai](https://openrouter.ai)
-
-If both are saved, Gemini is used first with OpenRouter as automatic fallback when quota runs out. You can update or change keys anytime via the **⚙** icon in the popup.
+![Demo Screen](rrcgifssss.gif)
 
 ---
 
-## Tech stack
+## ⚡ Core Features
 
-- Chrome Extension Manifest V3
-- Gemini 2.0 Flash (primary) → OpenRouter fallback
-- Two-phase progressive loading: instant word count preview → full recipe extraction
-- Vanilla JS — no frameworks, no build step
+- 📈 **Sarcastic Rage Meter** — Computes a layout rage score (0–10) representing how much unnecessary padding and ads you had to scroll through.
+- 🥗 **Clean Ingredients List** — Isolates a clean, readable bulleted list with exact measurements and zero filler text.
+- 📋 **Bulleted Instructions** — Displays standard numbered cooking steps, optimized for active kitchen viewing.
+- 🗣 **"What You Skipped" Fluff Tracker** — Generates a humorous, AI-summarized overview of the blog stories, family history, or local farm writeups you bypassed.
+- 🚪 **Wrong Kitchen Detector** — Open a non-food page by mistake? The AI humorously detects this and attempts to list the "ingredients" and "recipes" of whatever site you're currently visiting.
+- ⏱ **Instant Word Count Preview** — Displays a progressive layout word count while the underlying Gemini model extracts the recipe text.
 
 ---
 
-## Part of 180 Days of Building
+## 🛠 Getting Started
 
-Shipping one AI Chrome extension every day for 180 days.
+### 1. Load the Extension
+1. Clone this repository locally.
+2. Open Chrome and navigate to `chrome://extensions`.
+3. Toggle on **Developer mode** in the top right.
+4. Click **Load unpacked** and select the `recipe-rage-cleaner` folder.
 
-Follow along: [@happy_ships](https://x.com/happy_ships)
+### 2. Configure Your Keys
+Launch the popup and click the **⚙** gear icon to configure your endpoints:
+- **Gemini Key** — Get one for free at [aistudio.google.com](https://aistudio.google.com/apikey).
+- **OpenRouter Key** (fallback) — Get one at [openrouter.ai](https://openrouter.ai).
+
+> [!WARNING]
+> No recipes or personal details are logged. All operations are run locally or queried directly to secure endpoints.
+
+---
+
+## 🔧 Technical Stack
+
+- **Extension Framework**: Chrome Extension Manifest V3
+- **Primary AI Engine**: Gemini 2.0 Flash via AI Studio SDK
+- **Fallback Engine**: OpenRouter API
+- **Client Implementation**: Pure Vanilla JS, no build steps, zero bulky dependencies. Runs directly out of the folder.
+
+---
+
+## 📅 180 Days of Building
+This project is part of a larger developer journey: shipping one useful AI tool/extension every day for 180 days.
+
+Follow along for daily releases and tech-stack deep dives:
+- **Twitter / X**: [@happy_ships](https://x.com/happy_ships)
+- **Day**: `04 / 180`
+- **Next Release**: `Sheet Brain`
+
+---
+
+*Licensed under the [MIT License](LICENSE).*
